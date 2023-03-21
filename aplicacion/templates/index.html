@@ -2,22 +2,47 @@
 <html lang="es">
 
 <head>
-    <title>Title</title>
+    <title>API - Jhonnatan Calderon</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: #EBEBEB;
+            margin-top: 2.5em;
+        }
+
+        .formulario {
+            padding: 1.5vw 4.5vw 1.5vw 4.5vw;
+        }
+
+        .var {
+            padding: 1vw;
+            background-color: #2e4087;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container text-center">
+        <div class="row align-items-start">
             {%for video in datos%}
-            <div class="col-md-3">
-                <h1><span class="text-danger">titulo: </span>{{video['title']}}</h1>
+            <div class="col-6 col-md-4">
+                <div class="card" style="margin: 0.5vw 0.5vw 0.5vw 0.5vw">
+                    <img class="card-img-top" src="https://www.dailymotion.com/thumbnail/video/{{video['id']}}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Sport</h4>
+                        <p>{{video['title']}}</p>
+                        <a href="https://www.dailymotion.com/video/{{video['id']}}">
+                            <input name="" id="" class="btn btn-primary" type="button" value="Ver video">
+                        </a>
+                    </div>
+                </div>
             </div>
             {%endfor%}
         </div>

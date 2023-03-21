@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    datos = requests.get('https://api.dailymotion.com/videos?channel=music&limit=10')
+    #dailymotion API
+    datos = requests.get('https://api.dailymotion.com/videos?channel=sport&limit=10')
     datos_json = datos.json()
-    print(datos_json)
     return render_template('index.html', datos=datos_json['list'])
 
 if __name__ == '__main__':
