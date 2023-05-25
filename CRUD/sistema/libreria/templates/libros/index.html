@@ -9,6 +9,7 @@
     </div>
     <div class="card-body">
         <h4 class="card-title">Title</h4>
+        <a name="" id="" class="btn btn-primary" href="{%url 'crear'%}" role="button">Agregar nuevo libro</a>
         <div class="table-responsive">
             <table class="table table-primary">
                 <thead>
@@ -26,7 +27,10 @@
                         <td>python multiproposito</td>
                         <td>imagen.jpg</td>
                         <td>Libros de python</td>
-                        <td>Editar | Borrar</td>
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar'%}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
